@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Definer</title>
-
     <style>
         *{
             margin:0;
@@ -18,7 +17,7 @@
             display:flex;
             justify-content:center;
             align-items:center;
-            background:linear-gradient(135deg,#4f46e5,#7c3aed);
+            background:#f4f6f9;
         }
 
         form{
@@ -87,16 +86,11 @@
     </style>
 </head>
 <body>
-
     <form method="post">
         <h3>Grade Definer</h3>
-
         <p>Please input your grade:</p>
-
         <input type="number" name="grade" required>
-
         <button type="submit">Submit Grade</button>
-
         <?php
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -120,7 +114,6 @@
             elseif ($grade <= 74) {
                 $output = "Failed!";
             }
-
             echo "<div class='result'>
                     Your Grade Equivalent is: <strong>$grade</strong><br>
                     Result: <strong>$output</strong>
